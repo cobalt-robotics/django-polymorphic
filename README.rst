@@ -1,11 +1,20 @@
-.. image::  https://travis-ci.org/django-polymorphic/django-polymorphic.svg?branch=master
-    :target: http://travis-ci.org/django-polymorphic/django-polymorphic
-.. image:: https://img.shields.io/pypi/v/django-polymorphic.svg
-    :target: https://pypi.python.org/pypi/django-polymorphic/
-.. image:: https://img.shields.io/codecov/c/github/django-polymorphic/django-polymorphic/master.svg
-    :target: https://codecov.io/github/django-polymorphic/django-polymorphic?branch=master
-.. image:: https://readthedocs.org/projects/django-polymorphic/badge/?version=stable
-    :target: https://django-polymorphic.readthedocs.io/en/stable/
+.. list-table::
+    :header-rows: 0
+    :widths: auto
+
+    * - .. image:: https://github.com/jazzband/django-polymorphic/actions/workflows/test.yml/badge.svg
+          :target: https://github.com/jazzband/django-polymorphic/actions/workflows/test.yml
+      - .. image:: https://img.shields.io/pypi/v/django-polymorphic.svg
+          :target: https://pypi.python.org/pypi/django-polymorphic/
+      - .. image:: https://img.shields.io/codecov/c/github/jazzband/django-polymorphic/master.svg
+          :target: https://codecov.io/github/jazzband/django-polymorphic?branch=master
+      - .. image:: https://readthedocs.org/projects/django-polymorphic/badge/?version=stable
+          :target: https://django-polymorphic.readthedocs.io/en/stable/
+      - .. image:: https://jazzband.co/static/img/badge.svg
+          :target: https://jazzband.co/
+          :alt: Jazzband
+
+
 
 Polymorphic Models for Django
 =============================
@@ -53,7 +62,7 @@ Features
   * Filtering model types: ``instance_of(...)`` and ``not_instance_of(...)``
   * Combining querysets of different models (``qs3 = qs1 | qs2``)
   * Support for custom user-defined managers.
-* Uses the minumum amount of queries needed to fetch the inherited models.
+* Uses the minimum amount of queries needed to fetch the inherited models.
 * Disabling polymorphic behavior when needed.
 
 
@@ -75,6 +84,14 @@ Install using ``pip``\ ...
 .. code:: bash
 
     $ pip install django-polymorphic
+
+
+At the moment we have an unoffical version (4.0.0a). While we wait to gain access to pip. If you want to use the latest version (which works for Django >4.0.0). You can install it using
+
+.. code:: bash
+
+    pip install git+https://github.com/jazzband/django-polymorphic.git@v4.0.0a#egg=django-polymorphic
+
 
 License
 =======

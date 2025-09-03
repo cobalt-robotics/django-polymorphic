@@ -206,10 +206,7 @@ class MROBase3(models.Model):
 
 
 class MRODerived(MROBase2, MROBase3):
-    if django.VERSION < (3, 0):
-
-        class Meta:
-            manager_inheritance_from_future = True
+    pass
 
 
 class ParentModelWithManager(PolymorphicModel):
@@ -372,6 +369,7 @@ class ProxyModelB(ProxyModelBase):
 # class TestBadFieldModel(ShowFieldType, PolymorphicModel):
 #    instance_of = models.CharField(max_length=10)
 
+
 # validation error: "polymorphic.relatednameclash: Accessor for field 'polymorphic_ctype' clashes
 # with related field 'ContentType.relatednameclash_set'." (reported by Andrew Ingram)
 # fixed with related_name
@@ -401,7 +399,6 @@ class CustomPkInherit(CustomPkBase):
 
 
 class DateModel(PolymorphicModel):
-
     date = models.DateTimeField()
 
 

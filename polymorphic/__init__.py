@@ -6,5 +6,7 @@ This code and affiliated files are (C) by Bert Constantin and individual contrib
 Please see LICENSE and AUTHORS for more information.
 """
 
+VERSION = "3.1.0"
 
-__version__ = "3.1.0"
+# version synonym for backwards compatibility
+__version__ = VERSION
